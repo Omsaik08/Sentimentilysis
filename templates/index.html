@@ -1,0 +1,287 @@
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Analysis</title>
+	<link rel = "icon" href ="{{ url_for('static', filename='images/icon.jpg')}}"
+        type = "image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+  </head>
+  <body>
+  
+ <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+    
+    <div class="site-navbar-wrap js-site-navbar bg-white">
+      
+      <div class="container">
+        <div class="site-navbar bg-light">
+          <div class="py-1">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <h2 class="mb-0 site-logo"><a href="/">Analysis</a></h2>
+              </div>
+              <div class="col-10">
+                <nav class="site-navigation text-right" role="navigation">	
+                  <div class="container">
+                    
+                    <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                      <li class="active">
+                        <a href="/">Home</a>
+                      </li>
+                      <li class="has-children">
+                        <a href="classes">Analysis</a>
+                        <ul class="dropdown arrow-top">
+                          <li class="has-children">
+                            <a href="#">sentiment Analysis</a>
+                            <ul class="dropdown">
+                              <li><a href="classes">Twitter Data</a></li>
+                            </ul>
+                          </li>
+							<li class="has-children">
+                            <a href="#">Emotion Analysis</a>
+							<ul class="dropdown">
+                              <li><a href="classes2">Text Data</a></li>
+                            </ul>
+							</li>
+                        </ul>
+                      </li>
+                      <li><a href="about">About</a></li>
+                      <li><a href="contact">Contact</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="slide-one-item home-slider owl-carousel">
+      
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for('static', filename='images/backgroung.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h2 class="caption mb-2">Analysis On Data</h2>
+              <h1 class=""><a href="">Sentiment & Emotion Analysis</a></h1>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+    </div>  
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-5 mb-md-0">
+            
+              <div class="img-border">
+                <!--<a href="https://vimeo.com/28959265" class="popup-vimeo image-play">-->
+                  <span class="icon-wrap">
+                    <!--<span class="icon icon-play"></span>-->
+                  </span>
+                  <img src="{{ url_for('static', filename='images/img_1.jpg') }}" alt="" class="img-fluid rounded">
+                </a>
+              </div>
+
+              <img src="{{ url_for('static', filename='images/twitter.jpg')}}" alt="Image" class="img-fluid image-absolute">
+            
+          </div>
+
+          <div class="col-md-5 ml-auto">
+            <div class="section-heading text-left">
+              <h2 class="mb-5">Sentiment Analysis</h2>
+            </div>
+            <p class="mb-4">Sentiment analysis is the automated process of analyzing text data and sorting it into sentiments positive, negative, or neutral. Using sentiment analysis tools to analyze opinions in Twitter data can help companies understand how people are talking about their brand..!</>
+            <!--<p><a href="www.google.com" class="popup-vimeo text-uppercase">   <input type="submit" value="Start Analysis" class="btn btn-primary pill text-white px-5 py-2"> <span class="icon-arrow-right small"></span></a></p>-->
+            <p><a href="classes"><input type="submit" value="Start Analysis" class="btn btn-primary pill text-white px-5 py-2"> <span class="icon-arrow-right small"></span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	<div class="site-section">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-md-5 ml-auto">
+            <div class="section-heading text-left">
+              <h2 class="mb-5">Emotion Analysis</h2>
+            </div>
+            <p class="mb-4">Emotion Analysis aims to detect and recognize types of feelings through the expression of texts, such as anger, disgust, fear, happiness, sadness, and surprise. ... Gauging how happy our citizens are</>
+            <!--<p><a href="www.google.com" class="popup-vimeo text-uppercase">   <input type="submit" value="Start Analysis" class="btn btn-primary pill text-white px-5 py-2"> <span class="icon-arrow-right small"></span></a></p>-->
+            <p><a href="classes2"><input type="submit" value="Start Analysis" class="btn btn-primary pill text-white px-5 py-2"> <span class="icon-arrow-right small"></span></a></p>
+          </div>
+		  
+		  
+		  <div class="col-md-6 mb-5 mb-md-0">
+            
+              <div class="img-border">
+                <!--<a href="https://vimeo.com/28959265" class="popup-vimeo image-play">-->
+                  <span class="icon-wrap">
+                    <!--<span class="icon icon-play"></span>-->
+                  </span>
+                  <img src="{{ url_for('static', filename='images/emotion.png') }}" alt="" class="img-fluid rounded">
+                </a>
+              </div>
+
+              
+            
+          </div>
+		  
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		 
+     <div class="py-5 quick-contact-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div>
+          
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div>
+                    <span class="icon-comments text-white h2 d-block"></span>
+                    <h2>Get In Touch</h2>
+                    <p class="mb-0">Email: omsaikalekar2000@gmail.com <br>
+                    Mobile: (+91) 9579486352 </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div> 
+
+    
+    <footer class="site-footer">
+      <div class="container">
+        
+
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-heading mb-4 text-white">About</h3>
+            <p>This website is developed only for seeking knowledge and knowing about how twitter API actually works..!</p>
+          </div>
+		  
+          <div class="col-md-4">
+		    <h3 class="footer-heading mb-4 text-white">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Visitor Number</h3>
+			<p><center>{{visitor_no}}</center></p>
+          </div>
+
+          
+          <div class="col-md-2">
+            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social</h3></div>
+              <div class="col-md-10">
+                <p>
+                  <a href="https://www.facebook.com/omsai.kalekar" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/Omsai21989397" class="p-2"><span class="icon-twitter"></span></a>
+                  <a href="https://www.instagram.com/0msai.k_/" class="p-2"><span class="icon-instagram"></span></a>
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+				This Template is developed by Omsai!
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mediaelement-and-player.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+                for (var i = 0; i < total; i++) {
+                    new MediaElementPlayer(mediaElements[i], {
+                        pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                        shimScriptAccess: 'always',
+                        success: function () {
+                            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                            for (var j = 0; j < targetTotal; j++) {
+                                target[j].style.visibility = 'visible';
+                            }
+                  }
+                });
+                }
+            });
+    </script>
+
+ 
+  </body>
+</html>

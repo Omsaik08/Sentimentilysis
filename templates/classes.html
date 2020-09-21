@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Sentiment Analysis</title>
+	  <link rel = "icon" href ="{{ url_for('static', filename='images/icon.jpg')}}"
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+    
+    <div class="site-navbar-wrap js-site-navbar bg-white">
+      
+      <div class="container">
+        <div class="site-navbar bg-light">
+          <div class="py-1">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <h2 class="mb-0 site-logo"><a href="/">Analysis</a></h2>
+              </div>
+              <div class="col-10">
+                <nav class="site-navigation text-right" role="navigation">	
+                  <div class="container">
+                    
+                    <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                      <li class="active">
+                        <a href="/">Home</a>
+                      </li>
+                      <li class="has-children">
+                        <a href="classes">Analysis</a>
+                        <ul class="dropdown arrow-top">
+                          <li class="has-children">
+                            <a href="#">sentiment Analysis</a>
+                            <ul class="dropdown">
+                              <li><a href="classes">Twitter Data</a></li>
+                            </ul>
+                          </li>
+							<li class="has-children">
+                            <a href="#">Emotion Analysis</a>
+							<ul class="dropdown">
+                              <li><a href="classes2">Text Data</a></li>
+                            </ul>
+							</li>
+                        </ul>
+                      </li>
+                      <li><a href="about">About</a></li>
+                      <li><a href="contact">Contact</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+      
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for('static', filename='images/analysis.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h2 class="caption mb-2">Let'Analyze</h2>
+              <h1 class="">Sentiment Analysis</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div class="site-section site-section-sm">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-12 col-lg-8 mb-5">   
+              <form action="sentiment" method="post" class="p-5 bg-white">
+  
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="font-weight-bold" for="fullname">Twitter UserName Of Person Of which Data is to be analyzed</label>
+                    <input type="text" name="fname" id="fullname" class="form-control" placeholder="Name (e.g. NarendraModi)">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="font-weight-bold" for="total_tweets">Number of Tweets to be analyzed</label>
+                    <input type="text" name="total" id="totalTweet" class="form-control" placeholder="Total tweets (e.g 100)">
+                  </div>
+                </div>
+                <!--<div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="font-weight-bold" for="total_tweets">Enter type of Data Visualization</label><br>
+                          <input type="radio" id="bar" name="chart" value="barchart" checked>
+                          <label for="bar">Bar chart</label><br>
+                          <input type="radio" id="line" name="chart" value="linechart">
+                          <label for="line">Line chart</label><br>
+                          <input type="radio" id="pie" name="chart" value="piechart">
+                          <label for="pie">Pie chart</label><br>
+                          <input type="radio" id="scatter" name="chart" value="scatterplot">
+                          <label for="scatter">Scatter Plot</label><br>
+                          <input type="radio" id="box" name="chart" value="boxchart">
+                          <label for="box">Box Chart</label><br>
+                  </div>
+                </div>-->
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <input type="submit" value="Start Analysis" class="btn btn-primary pill text-white px-5 py-2">
+                  </div>
+                </div>
+              </form>
+				{% if st=="Invalid" %}
+				<h3 class="h5 text-black mb-3">Invalid Username</h3>
+				{% else %}
+			  	<h3 class="h5 text-black mb-3">Output:</h3>
+				<p class="mb-0 font-weight-bold">Name:<i>{{name}}%</i></p>
+				<p class="mb-0 font-weight-bold">% of Positive Sentiment(%):<i>{{pos}}%</i></p>
+				<p class="mb-0 font-weight-bold">% of Negative Sentiment(%): <i>{{neg}}%</i></p>
+				<p class="mb-0 font-weight-bold">% of Neutral  Sentiment(%):<i>{{neu}}%</i></p>
+				{% endif %}
+            </div>
+			
+			
+			<div class="col-lg-4">
+				<div class="p-4 mb-3 bg-white">
+					<img src="{{ url_for('static', filename='images/help.jpg') }}" alt="Image" class="img-fluid" style=" height:300px; width:550px;">
+				</div>
+			</div>
+          </div>
+        </div>
+      </div>
+
+  
+
+    
+      <footer class="site-footer">
+      <div class="container">
+        
+
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-heading mb-4 text-white">About</h3>
+            <p>This website is developed only for seeking knowledge and knowing about how twitter API actually works..!</p>
+          </div>
+		  
+          <div class="col-md-4">
+		    <h3 class="footer-heading mb-4 text-white">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Visitor Number</h3>
+			<p><center>{{visitor_no}}</center></p>
+          </div>
+
+          
+          <div class="col-md-2">
+            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social</h3></div>
+              <div class="col-md-10">
+                <p>
+                  <a href="https://www.facebook.com/omsai.kalekar" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/Omsai21989397" class="p-2"><span class="icon-twitter"></span></a>
+                  <a href="https://www.instagram.com/0msai.k_/" class="p-2"><span class="icon-instagram"></span></a>
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+				This Template is developed by Omsai!
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mediaelement-and-player.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+                for (var i = 0; i < total; i++) {
+                    new MediaElementPlayer(mediaElements[i], {
+                        pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                        shimScriptAccess: 'always',
+                        success: function () {
+                            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                            for (var j = 0; j < targetTotal; j++) {
+                                target[j].style.visibility = 'visible';
+                            }
+                  }
+                });
+                }
+            });
+    </script>
+
+  </body>
+</html>
